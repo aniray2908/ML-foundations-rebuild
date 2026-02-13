@@ -1,0 +1,391 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNNW/DrN0K0gjW+vC4FFZCu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/aniray2908/ML-foundations-rebuild/blob/main/linear_algebra/linear_algebra/matrix_basics.inpynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Matrix Multiplication & Linear Transformations\n",
+        "\n",
+        "Week 1 – Linear Algebra Foundations\n",
+        "\n",
+        "Goal:\n",
+        "- Implement matrix multiplication manually\n",
+        "- Understand geometric meaning\n",
+        "- Connect matrices to ML models\n"
+      ],
+      "metadata": {
+        "id": "t-1cQxWz3YA0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n"
+      ],
+      "metadata": {
+        "id": "YyMuEsl23mve"
+      },
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### PART 1 — Manual Matrix Multiplication"
+      ],
+      "metadata": {
+        "id": "IWdHBHWW3rZu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A = np.array([[1, 2],\n",
+        "              [3, 4]])\n",
+        "\n",
+        "B = np.array([[5, 6],\n",
+        "              [7, 8]])\n",
+        "\n",
+        "print(\"Matrix A:\\n\", A)\n",
+        "print(\"\\nMatrix B:\\n\", B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t0Nj7ww831gA",
+        "outputId": "3de287f5-5975-4766-b59e-2df01b327345"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Matrix A:\n",
+            " [[1 2]\n",
+            " [3 4]]\n",
+            "\n",
+            "Matrix B:\n",
+            " [[5 6]\n",
+            " [7 8]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def manual_matrix_multiply(A, B):\n",
+        "    rows_A = A.shape[0]\n",
+        "    cols_A = A.shape[1]\n",
+        "    rows_B = B.shape[0]\n",
+        "    cols_B = B.shape[1]\n",
+        "\n",
+        "    if cols_A != rows_B:\n",
+        "        raise ValueError(\"Matrix dimensions do not align for multiplication.\")\n",
+        "\n",
+        "    result = np.zeros((rows_A, cols_B))\n",
+        "\n",
+        "    for i in range(rows_A):\n",
+        "        for j in range(cols_B):\n",
+        "            for k in range(cols_A):\n",
+        "                result[i][j] += A[i][k] * B[k][j]\n",
+        "\n",
+        "    return result"
+      ],
+      "metadata": {
+        "id": "Hit0OYWH37SD"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "manual_result = manual_matrix_multiply(A, B)\n",
+        "numpy_result = A @ B\n",
+        "\n",
+        "print(\"Manual Result:\\n\", manual_result)\n",
+        "print(\"\\nNumPy Result:\\n\", numpy_result)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S7E8ToO83-iN",
+        "outputId": "e2cf97eb-e764-4f8e-a159-42894d69b180"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Manual Result:\n",
+            " [[19. 22.]\n",
+            " [43. 50.]]\n",
+            "\n",
+            "NumPy Result:\n",
+            " [[19 22]\n",
+            " [43 50]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### What is happening here?\n",
+        "\n",
+        "Each element in the resulting matrix is:\n",
+        "\n",
+        "Dot product of:\n",
+        "- A row from Matrix A\n",
+        "- A column from Matrix B\n",
+        "\n",
+        "Matrix multiplication composes transformations.\n"
+      ],
+      "metadata": {
+        "id": "i7wvypn34Bzg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### PART 2 — Geometric Interpretation"
+      ],
+      "metadata": {
+        "id": "UZLIahcz4GyR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "v1 = np.array([1, 0])\n",
+        "v2 = np.array([0, 1])\n",
+        "\n",
+        "print(\"Original v1:\", v1)\n",
+        "print(\"Original v2:\", v2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lRHjlsKX4Lor",
+        "outputId": "8f7966b4-2285-4095-ca17-9fb13f212174"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original v1: [1 0]\n",
+            "Original v2: [0 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "scaling_matrix = np.array([[2, 0],\n",
+        "                           [0, 3]])\n",
+        "\n",
+        "v1_scaled = scaling_matrix @ v1\n",
+        "v2_scaled = scaling_matrix @ v2\n",
+        "\n",
+        "print(\"Scaled v1:\", v1_scaled)\n",
+        "print(\"Scaled v2:\", v2_scaled)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i7FbAbdy4OTg",
+        "outputId": "f25c04e7-367b-4ce7-92c8-fcf3691def82"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Scaled v1: [2 0]\n",
+            "Scaled v2: [0 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "rotation_matrix = np.array([[0, -1],\n",
+        "                            [1,  0]])\n",
+        "\n",
+        "v1_rotated = rotation_matrix @ v1\n",
+        "v2_rotated = rotation_matrix @ v2\n",
+        "\n",
+        "print(\"Rotated v1:\", v1_rotated)\n",
+        "print(\"Rotated v2:\", v2_rotated)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "17TTz7sz4Q7N",
+        "outputId": "c83aed51-0758-424f-a446-1438e98d12b4"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Rotated v1: [0 1]\n",
+            "Rotated v2: [-1  0]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "combined_1 = rotation_matrix @ scaling_matrix\n",
+        "combined_2 = scaling_matrix @ rotation_matrix\n",
+        "\n",
+        "print(\"Rotation then Scaling:\\n\", combined_1)\n",
+        "print(\"\\nScaling then Rotation:\\n\", combined_2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zDlIVjTC4UXh",
+        "outputId": "f1522705-cfb9-4bbb-931e-45583d70b70c"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Rotation then Scaling:\n",
+            " [[ 0 -3]\n",
+            " [ 2  0]]\n",
+            "\n",
+            "Scaling then Rotation:\n",
+            " [[ 0 -2]\n",
+            " [ 3  0]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Matrix multiplication is NOT commutative.\n",
+        "\n",
+        "AB ≠ BA\n",
+        "\n",
+        "Because:\n",
+        "Applying transformation A then B\n",
+        "is different from applying B then A.\n",
+        "\n",
+        "In ML:\n",
+        "Layer ordering changes model behavior.\n"
+      ],
+      "metadata": {
+        "id": "v8oVkAAs4bNC"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## PART 3 — ML Connection"
+      ],
+      "metadata": {
+        "id": "ZqCxY2fw4e3F"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Simulating one layer of a neural network\n",
+        "\n",
+        "W = np.array([[0.5, -0.2],\n",
+        "              [0.8,  0.1]])\n",
+        "\n",
+        "x = np.array([2, 3])\n",
+        "\n",
+        "output = W @ x\n",
+        "\n",
+        "print(\"Input vector:\", x)\n",
+        "print(\"Weight matrix:\\n\", W)\n",
+        "print(\"Layer output:\", output)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mnezL4fd4eS8",
+        "outputId": "f9971db0-caf7-4902-eb6b-bb13fef4ae99"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input vector: [2 3]\n",
+            "Weight matrix:\n",
+            " [[ 0.5 -0.2]\n",
+            " [ 0.8  0.1]]\n",
+            "Layer output: [0.4 1.9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Key Insights\n",
+        "\n",
+        "1. A matrix represents a linear transformation.\n",
+        "2. Matrix multiplication composes transformations.\n",
+        "3. Order matters because transformations are sequential.\n",
+        "4. In neural networks, weights are matrices transforming inputs.\n",
+        "5. Every ML model layer is fundamentally matrix multiplication.\n"
+      ],
+      "metadata": {
+        "id": "5BbkZsGL4mnR"
+      }
+    }
+  ]
+}
