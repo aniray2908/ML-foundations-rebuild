@@ -133,3 +133,9 @@ They reveal:
    Spectral radius affects convergence.
 
 ---
+
+## References
+
+- [Mathematics for Machine Learning – Imperial](https://www.coursera.org/specializations/mathematics-machine-learning)
+- [3Blue1Brown – Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- [NumPy Linear Algebra Docs](https://numpy.org/doc/stable/reference/routines.linalg.html)
