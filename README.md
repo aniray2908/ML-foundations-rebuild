@@ -18,10 +18,11 @@ This repository documents conceptual understanding, mathematical derivations, an
 - Linear transformations (geometric view)
 - Eigenvalues and eigenvectors
 - Verification of Av = λv
+- Singular Value Decomposition (A = UΣVᵀ)
+- Principal Component Analysis (derived from covariance & SVD)
 
-### Key Insight
-Machine learning models are fundamentally matrix transformations.
-Understanding eigenvalues reveals dominant structural directions in data.
+### Key Outcome:
+Understanding ML models as structured linear transformations, not black boxes.
 
 ---
 
@@ -33,4 +34,23 @@ mlops_pipeline/ → Engineered ML project conversion
 
 ---
 
-This sprint prioritizes depth over certificates.
+## How to explore this project
+
+1. Navigate to `linear_algebra/`  
+2. Open and run the notebooks in order:
+   - matrix_basics.ipynb
+   - eigen_basics.ipynb
+   - svd_basics.ipynb
+   - pca_from_scratch.ipynb  
+
+---
+
+## Roadmap
+
+Week 1 — Linear Algebra  
+Week 2 — Statistical Learning  
+Week 3 — MLOps Pipeline  
+Week 4 — Data Engineering  
+
+---
+
