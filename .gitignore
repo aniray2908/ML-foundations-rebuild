@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model files (future safety)
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# Large data files (optional, but recommended)
+*.csv
+*.zip
+*.tar.gz
+
+# VSCode settings (if used later)
+.vscode/
