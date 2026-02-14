@@ -162,6 +162,28 @@ Singular values measure scaling strength.
 - Latent factor models
 - Numerical stability
 
+---
+
+# Week 1 – PCA
+
+## Definition
+PCA finds orthogonal directions maximizing variance.
+
+## Steps
+1. Center data
+2. Compute covariance
+3. Eigen decomposition
+4. Project onto top eigenvectors
+
+## Why It Works
+Eigenvalues measure variance magnitude.
+Largest eigenvalue corresponds to most informative direction.
+
+## Relation to SVD
+SVD provides numerically stable PCA computation.
+
+---
+
 ## References
 
 - [Mathematics for Machine Learning – Imperial](https://www.coursera.org/specializations/mathematics-machine-learning)
