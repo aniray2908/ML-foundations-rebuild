@@ -134,6 +134,34 @@ They reveal:
 
 ---
 
+# Week 1 – Singular Value Decomposition (SVD)
+
+## Definition
+
+A = U Σ Vᵀ
+
+Where:
+U and V are orthogonal matrices.
+Σ contains singular values.
+
+---
+
+## Interpretation
+
+Every matrix transformation =
+rotation → scaling → rotation.
+
+Singular values measure scaling strength.
+
+---
+
+## Why SVD Matters in ML
+
+- PCA implementation
+- Dimensionality reduction
+- Latent factor models
+- Numerical stability
+
 ## References
 
 - [Mathematics for Machine Learning – Imperial](https://www.coursera.org/specializations/mathematics-machine-learning)
