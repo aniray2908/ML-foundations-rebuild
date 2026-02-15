@@ -1,72 +1,128 @@
 # ML Foundations Rebuild
 
-A 6-week structured sprint to strengthen:
+A structured 6-week machine learning foundations reboot focused on mathematical maturity, statistical learning theory, and disciplined model evaluation.
 
-- Linear algebra depth
-- Statistical learning maturity
-- MLOps and production readiness
-- Data engineering fundamentals
+This repository is not about collecting certificates.
 
-This repository documents conceptual understanding, mathematical derivations, and implementation work.
+It is about rebuilding core ML foundations through:
+- Clear theory documentation
+- Mathematical reasoning
+- Structured experimentation
+- Clean implementation
+
+---
+
+## Why This Repository Exists
+
+The goal of this sprint is to:
+
+- Strengthen linear algebra confidence
+- Deepen statistical learning understanding
+- Build disciplined model selection habits
+- Transition from "fitting models" to "understanding generalization"
+- Prepare for advanced ML, MLOps, and production systems
+
+---
+
+# Repository Structure
+
+ML-foundations-rebuild/\
+│\
+├── linear_algebra/\
+├── statistical_learning/\
+├── mlops_pipeline/\
+│\
+├── requirements.txt\
+└── README.md
 
 ---
 
 ## Week 1 – Linear Algebra Foundations
 
-### Covered
-- Matrix multiplication (manual implementation)
-- Linear transformations (geometric view)
-- Eigenvalues and eigenvectors
-- Verification of Av = λv
-- Singular Value Decomposition (A = UΣVᵀ)
-- Principal Component Analysis (derived from covariance & SVD)
+Topics covered:
 
-### Key Outcome:
-Understanding ML models as structured linear transformations, not black boxes.
+- Matrix multiplication & transformations
+- Eigenvalues and eigenvectors
+- Singular Value Decomposition (SVD)
+- Principal Component Analysis (PCA)
+
+Focus:
+Understanding how matrix operations drive machine learning models.
+
+---
 
 ## Week 2 – Statistical Learning
 
-Topics Covered:
+Topics covered:
 
 - Bias–Variance Tradeoff
 - Linear Regression (statistical view)
 - Multicollinearity
 - Ridge & Lasso regularization
-- Cross-validation
+- Cross-validation (K-fold, LOOCV)
 - AIC & AICc
+- Hyperparameter tuning
 - Structured model comparison
 
-### Key Outcome:
-Understanding model generalization, regularization, and disciplined evaluation.
+Implementation notebooks include:
 
+- Bias–Variance visualization
+- Ridge vs Lasso coefficient comparison
+- Cross-validation tuning of Ridge
+- OLS vs Ridge vs Lasso vs Random Forest comparison
 
----
-
-## Repository Structure
-
-linear_algebra/ → Mathematical foundations  
-statistical_learning/ → Model evaluation & bias–variance  
-mlops_pipeline/ → Engineered ML project conversion  
+Outcome:
+Understanding generalization, model complexity, and disciplined evaluation.
 
 ---
 
-## How to explore this project
+# Installation
 
-1. Navigate to `linear_algebra/`  
-2. Open and run the notebooks in order:
-   - matrix_basics.ipynb
-   - eigen_basics.ipynb
-   - svd_basics.ipynb
-   - pca_from_scratch.ipynb  
+Clone the repository:
 
----
+git clone https://github.com/aniray2908/ML-foundations-rebuild.git
+cd ML-foundations-rebuild
 
-## Roadmap
-
-Week 1 — Linear Algebra  
-Week 2 — Statistical Learning  
-Week 3 — MLOps Pipeline  
-Week 4 — Data Engineering  
+Install dependencies:
+pip install -r requirements.txt
 
 ---
 
+# Key Learning Philosophy
+
+This repository follows three principles:
+
+1. Theory before tooling  
+2. Derivation before automation  
+3. Evaluation before optimization  
+
+Model performance is not just about accuracy.
+It is about understanding bias, variance, and generalization behavior.
+
+---
+
+# References
+
+Primary sources used in this rebuild:
+
+- James, Witten, Hastie, Tibshirani — *Introduction to Statistical Learning*
+- Hastie, Tibshirani, Friedman — *The Elements of Statistical Learning*
+- Stanford Statistical Learning Lectures
+- Scikit-learn Documentation
+
+---
+
+# Next Steps
+
+Upcoming sections will expand into:
+
+- Evaluation metrics & interpretability
+- Engineered ML pipelines
+- Reproducible experimentation
+- MLOps foundations
+
+---
+
+# Author
+
+Anisha Ray  
