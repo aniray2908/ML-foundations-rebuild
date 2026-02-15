@@ -24,6 +24,22 @@ This repository documents conceptual understanding, mathematical derivations, an
 ### Key Outcome:
 Understanding ML models as structured linear transformations, not black boxes.
 
+## Week 2 – Statistical Learning
+
+Topics Covered:
+
+- Bias–Variance Tradeoff
+- Linear Regression (statistical view)
+- Multicollinearity
+- Ridge & Lasso regularization
+- Cross-validation
+- AIC & AICc
+- Structured model comparison
+
+### Key Outcome:
+Understanding model generalization, regularization, and disciplined evaluation.
+
+
 ---
 
 ## Repository Structure
