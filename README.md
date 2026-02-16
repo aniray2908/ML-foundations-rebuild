@@ -1,6 +1,7 @@
 # ML Foundations Rebuild
 
-A structured 6-week machine learning foundations reboot focused on mathematical maturity, statistical learning theory, and disciplined model evaluation.
+A structured 6-week rebuild of core machine learning foundations, covering linear algebra, statistical learning, and disciplined model evaluation.
+This repository focuses on mathematical clarity, structured experimentation, and engineering discipline — not certificate collection.
 
 This repository is not about collecting certificates.
 
@@ -53,16 +54,31 @@ Understanding how matrix operations drive machine learning models.
 
 ## Week 2 – Statistical Learning
 
-Topics covered:
+Topics Covered:
 
+Regression:
 - Bias–Variance Tradeoff
-- Linear Regression (statistical view)
-- Multicollinearity
-- Ridge & Lasso regularization
-- Cross-validation (K-fold, LOOCV)
+- OLS and Multicollinearity
+- Ridge & Lasso Regularization
+- Cross-Validation
 - AIC & AICc
-- Hyperparameter tuning
-- Structured model comparison
+
+Classification:
+- Logistic Regression (log-odds modeling)
+- Cross-Entropy Loss
+- Linear Decision Boundaries
+
+Nonlinear Models:
+- Decision Trees (Gini & Entropy intuition)
+- Tree Instability & Overfitting
+
+Ensemble Learning:
+- Bagging
+- Random Forest
+- Variance reduction through decorrelation
+
+Outcome:
+Structural understanding of regression, classification, and ensemble learning with disciplined model selection.
 
 Implementation notebooks include:
 
@@ -70,6 +86,8 @@ Implementation notebooks include:
 - Ridge vs Lasso coefficient comparison
 - Cross-validation tuning of Ridge
 - OLS vs Ridge vs Lasso vs Random Forest comparison
+- Logistic Regression Demonstration
+- Decision Tree vs Random Forest Visualization
 
 Outcome:
 Understanding generalization, model complexity, and disciplined evaluation.
