@@ -83,6 +83,13 @@ Topics Covered:
 - Threshold tradeoffs
 - Calibration and probability reliability
 
+### Resampling Methods
+- Cross-validation recap
+- Bootstrap sampling
+- Out-of-bag intuition
+- Variance estimation
+- Connection to bagging
+
 Implementation notebooks include:
 
 - Bias–Variance visualization
@@ -92,6 +99,7 @@ Implementation notebooks include:
 - Logistic Regression demonstration
 - Decision Tree vs Random Forest visualization
 - ROC, PR, and calibration analysis
+- Bootstrap variance estimation demo
 
 Outcome:
 
@@ -103,6 +111,7 @@ Completed supervised learning foundations covering:
 - Bias–variance reasoning
 - Model evaluation under class imbalance
 - Calibration and cost-aware decision thinking
+- Resampling theory and bootstrap-based variance estimation
 
 Result:  
 Structured understanding of both model construction and disciplined model evaluation.
