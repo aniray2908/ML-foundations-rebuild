@@ -26,13 +26,13 @@ The goal of this sprint is to:
 
 # Repository Structure
 
-ML-foundations-rebuild/\  
-│\  
-├── linear_algebra/\  
-├── statistical_learning/\
-├── mlops_pipeline/\  
-│\  
-├── requirements.txt\  
+ML-foundations-rebuild/  
+|  
+├── linear_algebra/  
+├── statistical_learning/
+├── mlops_pipeline/  
+│  
+├── requirements.txt  
 └── README.md  
 
 ---
