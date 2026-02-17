@@ -1,11 +1,10 @@
 # ML Foundations Rebuild
 
 A structured 6-week rebuild of core machine learning foundations, covering linear algebra, statistical learning, and disciplined model evaluation.
-This repository focuses on mathematical clarity, structured experimentation, and engineering discipline — not certificate collection.
 
-This repository is not about collecting certificates.
+This repository is not about certificate accumulation.
 
-It is about rebuilding core ML foundations through:
+It is a deliberate rebuild of ML fundamentals through:
 - Clear theory documentation
 - Mathematical reasoning
 - Structured experimentation
@@ -27,14 +26,14 @@ The goal of this sprint is to:
 
 # Repository Structure
 
-ML-foundations-rebuild/\
-│\
-├── linear_algebra/\
+ML-foundations-rebuild/\  
+│\  
+├── linear_algebra/\  
 ├── statistical_learning/\
-├── mlops_pipeline/\
-│\
-├── requirements.txt\
-└── README.md
+├── mlops_pipeline/\  
+│\  
+├── requirements.txt\  
+└── README.md  
 
 ---
 
@@ -47,7 +46,7 @@ Topics covered:
 - Singular Value Decomposition (SVD)
 - Principal Component Analysis (PCA)
 
-Focus:
+Focus:  
 Understanding how matrix operations drive machine learning models.
 
 ---
@@ -56,29 +55,33 @@ Understanding how matrix operations drive machine learning models.
 
 Topics Covered:
 
-Regression:
+### Regression
 - Bias–Variance Tradeoff
 - OLS and Multicollinearity
 - Ridge & Lasso Regularization
 - Cross-Validation
 - AIC & AICc
 
-Classification:
+### Classification
 - Logistic Regression (log-odds modeling)
 - Cross-Entropy Loss
 - Linear Decision Boundaries
 
-Nonlinear Models:
+### Nonlinear Models
 - Decision Trees (Gini & Entropy intuition)
 - Tree Instability & Overfitting
 
-Ensemble Learning:
+### Ensemble Learning
 - Bagging
 - Random Forest
 - Variance reduction through decorrelation
 
-Outcome:
-Structural understanding of regression, classification, and ensemble learning with disciplined model selection.
+### Model Evaluation
+- Confusion Matrix
+- Precision, Recall, F1
+- ROC vs Precision–Recall analysis
+- Threshold tradeoffs
+- Calibration and probability reliability
 
 Implementation notebooks include:
 
@@ -86,11 +89,23 @@ Implementation notebooks include:
 - Ridge vs Lasso coefficient comparison
 - Cross-validation tuning of Ridge
 - OLS vs Ridge vs Lasso vs Random Forest comparison
-- Logistic Regression Demonstration
-- Decision Tree vs Random Forest Visualization
+- Logistic Regression demonstration
+- Decision Tree vs Random Forest visualization
+- ROC, PR, and calibration analysis
 
 Outcome:
-Understanding generalization, model complexity, and disciplined evaluation.
+
+Completed supervised learning foundations covering:
+
+- Regression and regularization
+- Classification modeling
+- Ensemble learning
+- Bias–variance reasoning
+- Model evaluation under class imbalance
+- Calibration and cost-aware decision thinking
+
+Result:  
+Structured understanding of both model construction and disciplined model evaluation.
 
 ---
 
@@ -102,6 +117,7 @@ git clone https://github.com/aniray2908/ML-foundations-rebuild.git
 cd ML-foundations-rebuild
 
 Install dependencies:
+
 pip install -r requirements.txt
 
 ---
@@ -114,8 +130,8 @@ This repository follows three principles:
 2. Derivation before automation  
 3. Evaluation before optimization  
 
-Model performance is not just about accuracy.
-It is about understanding bias, variance, and generalization behavior.
+Model performance is not just about accuracy.  
+It is about understanding bias, variance, calibration, and generalization behavior.
 
 ---
 
@@ -134,13 +150,13 @@ Primary sources used in this rebuild:
 
 Upcoming sections will expand into:
 
-- Evaluation metrics & interpretability
 - Engineered ML pipelines
 - Reproducible experimentation
+- Model versioning and tracking
 - MLOps foundations
 
 ---
 
 # Author
 
-Anisha Ray  
+Anisha Ray
