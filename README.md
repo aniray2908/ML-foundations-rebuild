@@ -29,7 +29,7 @@ The goal of this sprint is to:
 ML-foundations-rebuild/  
 |  
 ├── linear_algebra/  
-├── statistical_learning/
+├── statistical_learning/\
 ├── mlops_pipeline/  
 │  
 ├── requirements.txt  
@@ -90,6 +90,12 @@ Topics Covered:
 - Variance estimation
 - Connection to bagging
 
+### Model Diagnostics
+- Learning curve analysis
+- Train vs test error behavior
+- Diagnosing bias vs variance
+- Data vs model capacity tradeoff
+- 
 Implementation notebooks include:
 
 - Bias–Variance visualization
@@ -100,6 +106,7 @@ Implementation notebooks include:
 - Decision Tree vs Random Forest visualization
 - ROC, PR, and calibration analysis
 - Bootstrap variance estimation demo
+- Learning curve analysis demo
 
 Outcome:
 
@@ -112,9 +119,10 @@ Completed supervised learning foundations covering:
 - Model evaluation under class imbalance
 - Calibration and cost-aware decision thinking
 - Resampling theory and bootstrap-based variance estimation
+- Learning curve-based diagnostic reasoning
 
 Result:  
-Structured understanding of both model construction and disciplined model evaluation.
+Structured understanding of model construction, evaluation, and diagnostic decision-making.
 
 ---
 
