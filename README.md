@@ -76,6 +76,15 @@ Topics Covered:
 - Random Forest
 - Variance reduction through decorrelation
 
+### Margin-Based Classification
+- Support Vector Machines (SVM)
+- Maximum margin principle
+- Hard vs Soft margin
+- C parameter (regularization tradeoff)
+- Kernel trick
+- RBF kernel and gamma
+- Bias–variance behavior in SVM
+
 ### Model Evaluation
 - Confusion Matrix
 - Precision, Recall, F1
@@ -95,7 +104,7 @@ Topics Covered:
 - Train vs test error behavior
 - Diagnosing bias vs variance
 - Data vs model capacity tradeoff
-- 
+
 Implementation notebooks include:
 
 - Bias–Variance visualization
@@ -107,22 +116,23 @@ Implementation notebooks include:
 - ROC, PR, and calibration analysis
 - Bootstrap variance estimation demo
 - Learning curve analysis demo
+- SVM boundary visualization demo
 
 Outcome:
 
-Completed supervised learning foundations covering:
+Completed classical supervised learning foundations including:
 
 - Regression and regularization
 - Classification modeling
 - Ensemble learning
-- Bias–variance reasoning
+- Margin-based classifiers (SVM)
 - Model evaluation under class imbalance
 - Calibration and cost-aware decision thinking
 - Resampling theory and bootstrap-based variance estimation
 - Learning curve-based diagnostic reasoning
 
 Result:  
-Structured understanding of model construction, evaluation, and diagnostic decision-making.
+Structured understanding of model construction, evaluation, margin maximization, and generalization behavior.
 
 ---
 
