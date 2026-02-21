@@ -138,6 +138,41 @@ Structured understanding of model construction, evaluation, margin maximization,
 
 ---
 
+## Week 3 – Unsupervised Learning
+
+Topics Covered:
+
+### Geometric Foundations
+- Distance metrics and similarity
+- Feature scaling and distortion
+- Curse of dimensionality
+- Distance concentration
+- Noise accumulation in high dimensions
+- PCA tradeoffs for clustering
+- Variance vs separation distinction
+
+### Clustering
+- K-Means objective function (WCSS / inertia)
+- Lloyd’s algorithm
+- Initialization sensitivity (k-means++)
+- Geometric assumptions (spherical clusters)
+- Elbow method
+- Silhouette score
+
+Implementation notebooks include:
+
+- Geometry intuition experiments
+- Distance concentration visualization
+- Noise feature degradation simulation
+
+Outcome:
+
+Structured understanding of unsupervised learning as a geometric problem,
+with explicit awareness of distance sensitivity, scaling effects,
+high-dimensional behavior, and centroid-based clustering assumptions.
+
+---
+
 # Installation
 
 Clone the repository:
