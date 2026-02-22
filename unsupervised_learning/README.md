@@ -13,8 +13,9 @@ Results depend entirely on:
 - Scaling
 - Distance metric
 - Dimensional structure
+- Density assumptions
 
-This module begins with geometric foundations before introducing algorithms.
+This module approaches unsupervised learning from a geometry-first perspective before introducing clustering algorithms.
 
 ---
 
@@ -26,17 +27,45 @@ All conceptual documentation is located in:
 
 - unsupervised_learning/theory/
 
-Current topics:
+Completed topics:
 
-- 01_geometry_foundations.md
+- 01_geometry_foundations.md  
+- 02_kmeans_clustering.md  
+- 03_hierarchical_clustering.md  
+- 04_dbscan.md  
 
-Upcoming topics:
+Theory coverage includes:
 
-- K-Means: objective function and optimization
-- Choosing K (elbow, inertia behavior)
-- Hierarchical clustering (linkage and dendrograms)
-- Principal Component Analysis (statistical interpretation)
-- Dimensionality reduction and clustering interaction
+### Geometric Foundations
+- Distance metrics and similarity
+- Feature scaling and distortion
+- Curse of dimensionality
+- Distance concentration
+- Noise accumulation
+- PCA tradeoffs for clustering
+- Variance vs separation distinction
+
+### Centroid-Based Clustering
+- K-Means objective (WCSS / inertia)
+- Lloyd’s algorithm
+- Initialization sensitivity (k-means++)
+- Elbow method
+- Silhouette score
+- Spherical cluster assumption
+
+### Linkage-Based Clustering
+- Agglomerative clustering
+- Single, Complete, Average, Ward linkage
+- Dendrogram interpretation
+- Chaining effect
+- Nested cluster structure
+
+### Density-Based Clustering
+- Core, border, and noise points
+- Density connectivity
+- Epsilon and min_samples sensitivity
+- Arbitrary shape detection
+- Failure under varying densities
 
 ---
 
@@ -46,24 +75,28 @@ Implementation notebooks are located in:
 
 - unsupervised_learning/demos/
 
-These will include:
+Completed demonstrations include:
 
-- Scaling and distance sensitivity experiments
-- High-dimensional noise simulations
-- K-Means behavior visualization
-- PCA + clustering interaction experiments
+- Geometry intuition experiments
+- Distance concentration visualization
+- K-Means (elbow + silhouette + scaling effects)
+- Hierarchical clustering (dendrogram + linkage comparison)
+- DBSCAN (non-spherical success + noise detection + density failure)
+
+Each notebook reinforces the geometric assumptions behind the algorithm.
 
 ---
 
-## Key Learning Outcome
+## Core Learning Outcome
 
 After completing this module:
 
-- Distance metrics are understood geometrically.
-- Feature scaling implications are internalized.
-- High-dimensional behavior is understood conceptually.
-- PCA tradeoffs for clustering are recognized.
-- Clustering assumptions are explicitly acknowledged.
+- Clustering is understood as assumption-driven, not universal.
+- Distance metrics are internalized geometrically.
+- Feature scaling effects are fully understood.
+- High-dimensional behavior and noise accumulation are recognized.
+- Centroid, linkage, and density-based paradigms are contrasted clearly.
+- Parameter sensitivity is reasoned structurally, not heuristically.
 
-Unsupervised learning is treated as a geometric problem,
-not just an algorithmic one.
+Unsupervised learning is treated as a geometric and structural discipline,
+not just an algorithmic exercise.
