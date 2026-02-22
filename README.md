@@ -1,6 +1,6 @@
 # ML Foundations Rebuild
 
-A structured 6-week rebuild of core machine learning foundations, covering linear algebra, statistical learning, and disciplined model evaluation.
+A structured 6-week rebuild of core machine learning foundations, covering linear algebra, supervised learning, unsupervised learning, and disciplined model evaluation.
 
 This repository is not about certificate accumulation.
 
@@ -20,6 +20,7 @@ The goal of this sprint is to:
 - Deepen statistical learning understanding
 - Build disciplined model selection habits
 - Transition from "fitting models" to "understanding generalization"
+- Understand clustering assumptions structurally
 - Prepare for advanced ML, MLOps, and production systems
 
 ---
@@ -53,7 +54,7 @@ Understanding how matrix operations drive machine learning models.
 
 ---
 
-## Week 2 – Statistical Learning
+## Week 2 – Supervised Learning
 
 Topics Covered:
 
@@ -151,7 +152,7 @@ Topics Covered:
 - PCA tradeoffs for clustering
 - Variance vs separation distinction
 
-### Clustering
+### Centroid-Based Clustering
 - K-Means objective function (WCSS / inertia)
 - Lloyd’s algorithm
 - Initialization sensitivity (k-means++)
@@ -159,17 +160,43 @@ Topics Covered:
 - Elbow method
 - Silhouette score
 
+### Linkage-Based Clustering
+- Agglomerative clustering
+- Single, Complete, Average, Ward linkage
+- Dendrogram interpretation
+- Chaining effect
+- Nested cluster structure
+
+### Density-Based Clustering
+- DBSCAN
+- Core, border, and noise points
+- Density connectivity
+- Epsilon and min_samples sensitivity
+- Arbitrary shape detection
+- Failure under varying densities
+
 Implementation notebooks include:
 
 - Geometry intuition experiments
 - Distance concentration visualization
-- Noise feature degradation simulation
+- K-Means (elbow + silhouette + scaling effects)
+- Hierarchical clustering (dendrogram + linkage comparison)
+- DBSCAN (non-spherical success + noise detection + density sensitivity)
 
 Outcome:
 
-Structured understanding of unsupervised learning as a geometric problem,
-with explicit awareness of distance sensitivity, scaling effects,
-high-dimensional behavior, and centroid-based clustering assumptions.
+Structured understanding of unsupervised learning as a geometry- and assumption-driven discipline.
+
+Result:
+
+Ability to reason about clustering algorithms in terms of:
+
+- Distance
+- Density
+- Linkage
+- Variance
+- Shape assumptions
+- Parameter sensitivity
 
 ---
 
@@ -177,8 +204,8 @@ high-dimensional behavior, and centroid-based clustering assumptions.
 
 Clone the repository:
 
-git clone https://github.com/aniray2908/ML-foundations-rebuild.git
-cd ML-foundations-rebuild
+git clone https://github.com/aniray2908/ML-foundations-rebuild.git  
+cd ML-foundations-rebuild  
 
 Install dependencies:
 
@@ -195,7 +222,7 @@ This repository follows three principles:
 3. Evaluation before optimization  
 
 Model performance is not just about accuracy.  
-It is about understanding bias, variance, calibration, and generalization behavior.
+It is about understanding bias, variance, calibration, geometry, and generalization behavior.
 
 ---
 
@@ -214,6 +241,10 @@ Primary sources used in this rebuild:
 
 Upcoming sections will expand into:
 
+- Internal cluster validation metrics
+- Stability-based clustering evaluation
+- Dimensionality reduction (PCA revisited from statistical perspective)
+- Interpretability techniques
 - Engineered ML pipelines
 - Reproducible experimentation
 - Model versioning and tracking
