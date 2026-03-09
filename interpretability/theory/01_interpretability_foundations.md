@@ -124,16 +124,6 @@ Examples include:
 
 In these models, the contribution of each feature can be directly observed.
 
-For example, in a linear regression model:
-
-\[
-y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_p x_p
-\]
-
-Each coefficient \( \beta_i \) represents the change in prediction associated with a one-unit change in feature \(x_i\), assuming other variables remain constant.
-
-This direct relationship makes linear models easy to interpret.
-
 ---
 
 ## 2.2 Explainability
