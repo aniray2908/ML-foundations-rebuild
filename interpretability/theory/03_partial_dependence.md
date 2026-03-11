@@ -65,12 +65,7 @@ The resulting curve shows how predicted outcomes change as the feature varies.
 
 If the PDP increases as the feature increases:
 prediction
-|
-| /
-| /
-| /
-| /
-+---------------- feature
+![Positive Partial Dependence](../../assets/interpretability_plots/pdp_positive_relationship.png)
 
 The model predicts higher outcomes as the feature increases.
 
@@ -84,12 +79,7 @@ house size ↑ → predicted price ↑
 
 If the curve decreases:
 prediction
-|
-|\
-|
-|
-|
-+---------------- feature
+![Negative Partial Dependence](../../assets/interpretability_plots/pdp_negative_relationship.png)
 
 The model predicts lower outcomes as the feature increases.
 
@@ -105,12 +95,7 @@ Many models learn nonlinear relationships.
 
 Example:
 prediction
-|
-| /\
-| /
-| /
-|_/ _
-+---------------- feature
+![Nonlinear Partial Dependence](../../assets/interpretability_plots/pdp_nonlinear_relationship.png)
 
 This may represent:
 
@@ -129,13 +114,7 @@ Income may rise during early career years and decline later.
 
 A curve that rises and then flattens suggests diminishing marginal effects.
 prediction
-|
-| ______
-| /
-| /
-| /
-| /
-+---------------- feature
+![Diminishing Returns PDP](../../assets/interpretability_plots/pdp_diminishing_returns.png)
 
 Increasing the feature initially increases predictions, but the effect levels off.
 
@@ -149,11 +128,7 @@ house size vs predicted price
 
 A flat PDP indicates that the feature has little influence on predictions.
 prediction
-|
-| -----------
-|
-|
-+---------------- feature
+![Flat Partial Dependence](../../assets/interpretability_plots/pdp_flat_relationship.png)
 
 This suggests the model does not rely strongly on that feature.
 
@@ -164,11 +139,7 @@ This suggests the model does not rely strongly on that feature.
 Sometimes PDP curves exhibit strong oscillations or zig-zag patterns.
 
 Example:
-prediction
-|
-| /_//_//
-| /
-+---------------- feature
+![Overfitting PDP Pattern](../../assets/interpretability_plots/pdp_overfit_pattern.png)
 
 This can indicate:
 
