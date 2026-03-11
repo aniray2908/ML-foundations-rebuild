@@ -79,7 +79,7 @@ house size ↑ → predicted price ↑
 
 If the curve decreases:
 prediction
-![Negative Partial Dependence](../../assets/interpretability_plots/pdp_diminishing_returns.png)
+![Negative Partial Dependence](../../assets/interpretability_plots/pdp_negative_relationship.png)
 
 The model predicts lower outcomes as the feature increases.
 
