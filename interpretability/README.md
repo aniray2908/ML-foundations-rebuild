@@ -17,19 +17,17 @@ This module studies interpretability from both **structural and post-hoc perspec
 ### Theory
 
 Conceptual documentation is located in:
+interpretability/theory/
 
-- interpretability/theory/
+Current theory modules include:
 
-Current topics include:
+- `01_interpretability_foundations.md`
+- `02_feature_importance.md`
+- `03_partial_dependence.md`
 
-- 01_interpretability_foundations.md
+Upcoming module:
 
-Upcoming topics:
-
-- Feature importance
-- Permutation importance
-- Partial dependence plots
-- SHAP intuition and additive explanations
+- `04_shap_intuition.md`
 
 ---
 
@@ -56,8 +54,23 @@ Topics include:
 - Tree-based feature importance
 - Permutation importance
 - Partial dependence plots
+- Feature response visualization
 
-These techniques reveal which features influence predictions across the dataset.
+These techniques reveal how features influence predictions across the dataset.
+
+---
+
+### Model Behavior Analysis
+
+Understanding how models translate feature values into predictions.
+
+Topics include:
+
+- Nonlinear feature effects
+- Diminishing returns
+- Feature interaction effects
+- Overfitting signals in model responses
+- Partial dependence limitations under correlated features
 
 ---
 
@@ -72,8 +85,8 @@ They answer questions such as:
 Topics include:
 
 - SHAP values
-- Instance-level feature attribution
-- Local explanation methods
+- Additive feature attribution
+- Instance-level explanation methods
 
 These techniques are particularly important in regulated decision systems.
 
@@ -82,18 +95,23 @@ These techniques are particularly important in regulated decision systems.
 # 📓 Demonstrations
 
 Implementation notebooks are located in:
+interpretability/demos/
 
-- interpretability/demos/
+Current demonstrations include:
 
-Planned demonstrations include:
+- `feature_importance_demo.ipynb`
+- `partial_dependence_demo.ipynb`
 
-- Feature importance comparison
-- Permutation importance experiments
+These notebooks demonstrate:
+
+- Tree-based feature importance
+- Permutation importance
 - Correlated feature importance pitfalls
-- SHAP value explanations
 - Partial dependence visualization
+- Nonlinear feature behavior
+- Interaction effects
 
-Each notebook demonstrates how interpretability methods behave in practice and highlights common pitfalls.
+Each notebook reinforces the theoretical concepts and illustrates common interpretability pitfalls.
 
 ---
 
@@ -104,7 +122,7 @@ After completing this module:
 - Model interpretability is understood as a structural component of ML systems.
 - Global and local explanations are clearly distinguished.
 - Feature attribution methods are understood conceptually and experimentally.
+- Functional relationships learned by models can be visualized and interpreted.
 - Limitations of interpretability techniques are recognized.
-- Practitioners can analyze and communicate model behavior responsibly.
 
 Interpretability is treated as a critical component of **trustworthy machine learning**, not merely a visualization tool.
