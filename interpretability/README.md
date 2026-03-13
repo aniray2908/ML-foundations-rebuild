@@ -24,9 +24,6 @@ Current theory modules include:
 - `01_interpretability_foundations.md`
 - `02_feature_importance.md`
 - `03_partial_dependence.md`
-
-Upcoming module:
-
 - `04_shap_intuition.md`
 
 ---
@@ -101,6 +98,7 @@ Current demonstrations include:
 
 - `feature_importance_demo.ipynb`
 - `partial_dependence_demo.ipynb`
+- `shap_explanations_demo.ipynb`
 
 These notebooks demonstrate:
 
