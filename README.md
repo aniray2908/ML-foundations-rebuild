@@ -262,8 +262,6 @@ While earlier modules focused on model behavior and statistical reasoning, this 
 
 Modern ML systems require structured pipelines, reproducible experimentation, model lifecycle management, and data governance.
 
----
-
 ### ML Pipeline Architecture
 
 - Data ingestion  
@@ -274,8 +272,6 @@ Modern ML systems require structured pipelines, reproducible experimentation, mo
 - Model artifact generation  
 
 Understanding pipeline structure helps transform ad-hoc experimentation into **structured and repeatable workflows**.
-
----
 
 ### Reproducibility
 
@@ -290,8 +286,6 @@ This section covers:
 
 Reproducibility ensures experiments can be **repeated and verified reliably**.
 
----
-
 ### Experiment Tracking
 
 ML development typically involves running many experiments.
@@ -305,8 +299,6 @@ Experiment tracking records:
 
 This enables systematic **comparison of models and training strategies**.
 
----
-
 ### Model Versioning
 
 Models evolve as datasets and training strategies improve.
@@ -317,8 +309,6 @@ Model versioning provides structured mechanisms to:
 - Track model evolution  
 - Manage deployment stages  
 - Enable safe rollback of models  
-
----
 
 ### Data Validation
 
@@ -334,8 +324,6 @@ This module covers validation mechanisms including:
 
 Data validation protects pipelines from **silent model failures caused by unexpected data changes**.
 
----
-
 ### Implementation Notebooks
 
 This module includes demonstration notebooks covering:
@@ -346,8 +334,6 @@ This module includes demonstration notebooks covering:
 - Hyperparameter experiment comparison  
 
 These demonstrations illustrate how **engineering practices support reliable machine learning systems**.
-
----
 
 **Outcome**
 
@@ -360,3 +346,8 @@ Key capabilities developed include:
 - Tracking model development  
 - Managing model lifecycle and versioning  
 - Validating production data pipelines
+
+---
+
+# Author
+**Anisha Ray**# ML Foundations Rebuild
