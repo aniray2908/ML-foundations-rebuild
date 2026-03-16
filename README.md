@@ -254,65 +254,109 @@ Ability to analyze, explain, and communicate machine learning model behavior res
 
 ---
 
-# Installation
+# Week 5 – MLOps Foundations
 
-Clone the repository:
+This module focuses on the **engineering discipline required to operationalize machine learning systems**.
 
-```bash
-git clone https://github.com/aniray2908/ML-foundations-rebuild.git
-cd ML-foundations-rebuild
-```
-Install dependencies:
-pip install -r requirements.txt
-# Key Learning Philosophy
+While earlier modules focused on model behavior and statistical reasoning, this stage addresses the **systems architecture required for reliable ML workflows**.
 
-This repository follows three principles:
-
-- **Theory before tooling**  
-- **Derivation before automation**  
-- **Evaluation before optimization**
-
-Model performance is not just about accuracy.
-
-It is about understanding:
-
-- Bias  
-- Variance  
-- Calibration  
-- Geometry  
-- Margin  
-- Density  
-- Separation  
-- Model assumptions  
-
-Machine learning is treated as a **structural discipline**.
+Modern ML systems require structured pipelines, reproducible experimentation, model lifecycle management, and data governance.
 
 ---
 
-# Next Phase
+### ML Pipeline Architecture
 
-After interpretability, the project transitions into:
-
-- ML pipeline engineering  
-- Reproducible experimentation  
-- Model versioning  
+- Data ingestion  
 - Data validation  
-- Production ML workflows  
-- MLOps foundations  
+- Feature engineering  
+- Model training  
+- Model evaluation  
+- Model artifact generation  
+
+Understanding pipeline structure helps transform ad-hoc experimentation into **structured and repeatable workflows**.
 
 ---
 
-# References
+### Reproducibility
 
-Primary sources used in this rebuild:
+Machine learning experiments often contain multiple sources of randomness.
 
-- James, Witten, Hastie, Tibshirani — *Introduction to Statistical Learning*  
-- Hastie, Tibshirani, Friedman — *The Elements of Statistical Learning*  
-- Stanford Statistical Learning Lectures  
-- Scikit-learn Documentation  
+This section covers:
+
+- Random seeds  
+- Deterministic data splits  
+- Dependency management  
+- Dataset versioning  
+
+Reproducibility ensures experiments can be **repeated and verified reliably**.
 
 ---
 
-# Author
+### Experiment Tracking
 
-**Anisha Ray**
+ML development typically involves running many experiments.
+
+Experiment tracking records:
+
+- Model architectures  
+- Hyperparameters  
+- Dataset versions  
+- Evaluation metrics  
+
+This enables systematic **comparison of models and training strategies**.
+
+---
+
+### Model Versioning
+
+Models evolve as datasets and training strategies improve.
+
+Model versioning provides structured mechanisms to:
+
+- Store trained model artifacts  
+- Track model evolution  
+- Manage deployment stages  
+- Enable safe rollback of models  
+
+---
+
+### Data Validation
+
+Machine learning systems depend on stable and reliable input data.
+
+This module covers validation mechanisms including:
+
+- Schema validation  
+- Missing value detection  
+- Range checks  
+- Data drift monitoring  
+- Feature distribution monitoring  
+
+Data validation protects pipelines from **silent model failures caused by unexpected data changes**.
+
+---
+
+### Implementation Notebooks
+
+This module includes demonstration notebooks covering:
+
+- Structured ML pipeline implementation  
+- Reproducible experiment design  
+- Experiment tracking workflows  
+- Hyperparameter experiment comparison  
+
+These demonstrations illustrate how **engineering practices support reliable machine learning systems**.
+
+---
+
+**Outcome**
+
+Understanding how machine learning systems transition from experimentation to **production-grade engineering workflows**.
+
+Key capabilities developed include:
+
+- Designing structured ML pipelines  
+- Building reproducible experiments  
+- Tracking model development  
+- Managing model lifecycle and versioning  
+- Validating production data pipelines
